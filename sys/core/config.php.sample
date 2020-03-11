@@ -1,0 +1,22 @@
+<?php
+// データベース接続情報
+define('DB_HOST', 'mysql6012.xserver.jp');
+define('DB_NAME', 'garupa_skillsocail');
+define('DB_USER', 'garupa_master');
+define('DB_PASS', '100mankaseguYR77');
+
+//Twitterのコンシュマーキー(APIキー)等読み込み
+define('TWITTER_API_KEY', 'vInmDk4kt1MGNI0QtgPr2GHLa'); //Consumer Key (API Key)
+define('TWITTER_API_SECRET', 'xU8OzqB499cJO4Xi3BVtiCURrkOJWJ4XCXjW9mhFQe286Ih8w6'); //Consumer Secret (API Secret)
+
+//コールバックページのURL
+//define('CALLBACK_URL_1', 'https://tweet-online.yrp.xyz/callback.php');
+//define('CALLBACK_URL_2', 'https://tweet-online.yrp.xyz/load_oarth_link.php');
+// 本番環境用
+define('CALLBACK_URL_1', 'https://tweet-online.net/sys/callback.php');
+define('CALLBACK_URL_2', 'https://tweet-online.net/sys/load_oarth_link.php');
+
+// 共通一般情報
+//define('SITE_URL', 'https://tweet-online.yrp.xyz/'); // ホームディレクトリー
+define('SITE_URL', 'https://tweet-online.net/sys/'); // 本番環境用
+define('SITE_TITLE', 'Tweet Online β'); // サイトタイトル

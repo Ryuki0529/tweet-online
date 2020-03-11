@@ -1,0 +1,3 @@
+<Files ~ "mail_set.php$">
+Deny from all
+</Files>

@@ -1,0 +1,3 @@
+<Files ~ "(tweet_set|tweet_job).php$">
+Deny from all
+</Files>

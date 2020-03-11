@@ -1,0 +1,15 @@
+@media screen and (max-width: 660px) {
+    #sideber, #primary {
+        flex-basis: 100%;
+    }
+
+    #twstock + label {
+        display: block;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    #message_modal_wrapper {
+        max-width: 90vw;
+    }
+}

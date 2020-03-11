@@ -1,0 +1,147 @@
+#twTextCount {
+    display: block;
+    width: 100%;
+    margin: 7px 0;
+    text-align: right;
+}
+
+#twstock {
+    width: unset;
+    -moz-transform:	scale(1.5);
+	-webkit-transform: scale(1.5);
+    transform: scale(1.5);
+    display: none;
+}
+
+#twstock + label {
+    margin-left: 10px;
+    padding: 4px 8px;
+    border: 2px dotted rgb(40, 135, 169);
+    border-radius: 15px;
+    transition: all .6s;
+    cursor: pointer;
+}
+
+#twstock:checked + label {
+    background: rgb(40, 135, 169);
+}
+
+.twhist-area {
+    display: flex;
+    align-items: stretch;
+    flex-flow: row wrap;
+    /*align-content: center;*/
+    width: 100%;
+}
+
+.twhist-area > .twhist-bg {
+    flex-basis: 50%;
+    padding: 5px;
+}
+
+.twhist-content {
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    background: #2A2C31;
+    color: #c4c4c4;
+    border: 1px solid #2A2C31;
+    cursor: default;
+    transition: all .6s;
+}
+
+.twhist-content:hover {
+    border: 1px solid white;
+}
+
+.settime-text {
+    display: block;
+    font-size: 15pt;
+    text-align: center;
+}
+
+.setdate-text {
+    display: block;
+    font-size: 12pt;
+    text-align: right;
+}
+
+.twhist-edit-area {
+    position: relative;
+    display: inline;
+}
+
+.twhist-edit-area > .twhist-edit-window {
+    position: absolute;
+    width: 150px;
+    right: 100%;
+    bottom: 0;
+    padding: 10px;
+    border: 2px dotted white;
+    background: rgba(0, 0, 0, 0.6);
+    transition: all .6s;
+    transform: translateX(50%) scale(0);
+}
+
+.twhist-edit-window.show {
+    transform: translateX(0%) scale(1);
+}
+
+.twhist-edit-btn {
+    font-size: 20px;
+    transition: all .6s;
+}
+
+.twhist-edit-btn:hover {
+    background: #4B4F57;
+}
+
+.twdel-btn {
+    display: block;
+    width: 100%;
+    background: red;
+    color: white;
+    text-align: center;
+    font-size: 14pt;
+}
+
+.twdel-btn:hover {
+    background: rgb(185, 0, 0);
+}
+
+#twset-message {
+    position: relative;
+    padding: 6px;
+    font-size: 14pt;
+    background: rgb(118, 155, 61);
+    color: white;
+    display: block;
+    margin: 10px 0;
+}
+
+#twset-message-close {
+    position: absolute;
+    color: white;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 660px) {
+    input { width: 100% !important; }
+
+    .form-submit-mini {
+        display: block;
+        margin: 0 auto;
+        width: unset;
+    }
+
+    .twhist-area > .twhist-bg {
+        flex-basis: 100%;
+    }
+
+    #message_modal_wrapper {
+        max-width: 80vw;
+    }
+}

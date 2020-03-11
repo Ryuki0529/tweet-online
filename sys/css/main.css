@@ -1,0 +1,589 @@
+@charset "utf-8";
+/* webフォント「Noto Serif JP」 */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP');
+/* fontawesomeの読み込み */
+@import url('https://use.fontawesome.com/releases/v5.5.0/css/all.css');
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+html, body, ul {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #fffffe;
+	color: white;
+	font-family: "Noto Sans JP", "Meiryo", "Hiragino Kaku Gothic ProN",
+				"Hiragino Kaku Gothic Pro", "Noto Sans Japanese", sans-serif;
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 1.6;
+	background-attachment: fixed;
+	background: #131417;
+	/*overflow-x: hidden;*/
+}
+
+h2 {
+	font-size: 2em;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+h2.green {
+	border-bottom: 4px solid #47CF73;
+	padding-bottom: 10px;
+}
+
+h2.blue {
+	border-bottom: 4px solid #0ebeff;
+	padding-bottom: 10px;
+}
+
+h2.yellow {
+	border-bottom: 4px solid #FFDD40;
+	padding-bottom: 10px;
+}
+
+h2.orange {
+	border-bottom: 4px solid rgb(255, 174, 0);
+	padding-bottom: 10px;
+}
+
+h2.mdium-font { font-size: 18pt; }
+
+h3 {
+	font-size: 1.5em;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	padding: 0px 10px;
+	padding-bottom: 4px;
+	border-bottom: 2px dotted white;
+	border-radius: 10px;
+	/*display: inline;*/
+}
+
+h3.gray {
+	background: rgb(73, 76, 84);
+}
+
+p {
+	margin: 10px 0;
+	padding: 0 10px;
+}
+
+input {
+	width: 100%;
+	padding: 6px;
+	font-size: 15pt;
+	background: #2A2C31;
+	border: none;
+	border-bottom: 2px solid white;
+	color: white;
+	transition: all .6s;
+}
+
+input::placeholder {
+	font-size: 15pt;
+	padding: 6px;
+}
+
+input[type="submit"] {
+	width: unset;
+	padding: 5px 10px;
+	border: none;
+	background: #444857;
+	cursor: pointer;
+}
+
+input[type="submit"]:hover {
+	background: #798099;
+}
+
+input[type="submit"]:disabled {
+	cursor: default;
+}
+
+input[type="submit"]:disabled:hover {
+	background: #444857;
+}
+
+textarea {
+	width: 100%;
+	height: 100px;
+	font-size: 13pt;
+	resize: vertical;
+	background: rgb(75, 79, 87);
+	border: none;
+	padding: 10px;
+	color: white;
+}
+
+textarea::placeholder {
+	color: white;
+}
+
+button {
+	border: none;
+	background: unset;
+	cursor: pointer;
+	color: white;
+}
+
+iframe {
+	width: 100%;
+	height: 100%;
+}
+
+img {
+	width: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+	transition: all .7s;
+}
+
+a:hover {
+	background: #7a8093;
+}
+
+ul { list-style: none; }
+
+.text_center {
+	position: relative;
+	text-align: center;
+	z-index: 0;
+}
+
+.text_center::before {
+	position: absolute;
+	font-family: "Font Awesome 5 Free", "Meiryo", "Hiragino Kaku Gothic ProN",
+							"Hiragino Kaku Gothic Pro", "Noto Sans Japanese";
+	white-space: pre-wrap;
+	content: '\f0dd';
+	bottom: -40px;
+	color: white;
+	font-size: 1.4em;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: -1;
+}
+
+.mask {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background: #00000096;
+	z-index: 15;
+	display: none;
+}
+
+.close_modal {
+	display: block;
+	margin: 5px auto;
+	border: 2px solid red;
+	color: red;
+	padding: 5px 20px;
+	text-align: center;
+	cursor: pointer;
+	background: none;
+}
+
+.bg_bura {
+	background: rgba(0, 0, 0, 0.4);
+	width: 100%;
+	min-height: 100vh;
+	height: 100%;
+}
+
+/*########################*/
+/*    ベースレイアウト     */
+/*########################*/
+.wrapper {
+	width: 100%;
+}
+
+.inner {
+	/*background: #131417;*/
+	width: 100%;
+}
+
+.container {
+	width: 100%;
+	max-width: 1350px;
+	margin: 0px auto;
+}
+
+.main_content {
+	display: flex;
+	align-items: stretch;
+	justify-content: left;
+	flex-flow: row wrap;
+}
+
+#sideber {
+	flex-basis: 25%;
+	padding: 10px;
+}
+
+#primary {
+	flex-basis: 75%;
+	padding: 10px;
+}
+
+/*##########################フォーム部品デザイン */
+.form-area {
+	display: flex;
+	align-items: center;
+	align-content: stretch;
+	justify-content: flex-start;
+	flex-flow: row wrap;
+	width: 100%;
+	padding: 10px;
+	background: #2A2C31;
+}
+
+.form-area .form-label {
+	max-width: 25%;
+	width: 100%;
+	text-align: center;
+	font-size: 15pt;
+	padding: 5px;
+}
+
+.form-area .form-item {
+	max-width: 45%;
+	width: 100%;
+	text-align: left;
+	font-size: 15pt;
+}
+
+.form-area .form-item input:focus {
+	border-bottom: 2px solid #47CF73;
+}
+
+.form-area .form-validation {
+	max-width: 30%;
+	width: 100%;
+	text-align: center;
+	font-size: 15pt;
+	padding: 5px;
+}
+
+.form-area .form-submit {
+	flex-basis: 100%;
+}
+
+.form-submit-mini {
+	width: 15%;
+}
+
+#show_pass {
+	background: #444857;
+	color: white;
+	border: none;
+	cursor: pointer;
+	font-size: 14pt;
+}
+
+/**************************/
+/*  アカウント選択メニュー  */
+/**************************/
+#message_modal_mask {
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	background: rgba(27, 35, 15, 0.6);
+	transition: all .1s;
+	transform: scale(0);
+}
+
+#message_modal_wrapper {
+	max-width: 35vw;
+	width: 100%;
+	max-height: 90vh;
+	padding: 20px;
+	overflow-y: scroll;
+	scrollbar-width: none;
+	scrollbar-color: #7a8093 #3b3d44;
+	transform: translate(-50%, -50%) scale(0);
+	transition: all .8s;
+	top: 50%;
+	left: 50%;
+	position: fixed;
+	background: #2a2c31;
+	border-radius: 15px;
+	z-index: 101;
+}
+
+#message_modal_content {
+	padding: 10px;
+	width: 100%;
+}
+
+#message_modal_content h2 {
+	text-align: center;
+}
+
+.loginbtn_twitter {
+    width: 100%;
+    max-width: 300px;
+    background: none;
+    border: 2px solid #1994ff;
+    background: #1994ff;
+    color: white;
+    padding: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 20px auto;
+    display: block;
+    text-align: center;
+    transition: all .7s;
+}
+
+.loginbtn_twitter:hover {
+    background: #046fcc;
+}
+
+#message_modal_close {
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	padding: 10px;
+	color: white;
+	background: unset;
+	border: none;
+	cursor: pointer;
+}
+
+#myaccounts_menu_mask {
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	background: rgba(33, 45, 10, 0.6);
+	transform: translateX(-100%);
+	transition: all .5s;
+}
+
+#myaccounts_menu_close {
+	position: fixed;
+	top: 15px;
+	left: 15px;
+	padding: 10px;
+	border: none;
+	background: unset;
+	color: white;
+	text-align: center;
+	z-index: 102;
+	cursor: pointer;
+}
+
+#myaccounts_menu {
+	width: 350px;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #2a2c31;
+	padding: 10px;
+	transform: translateX(-100%);
+	transition: all .8s;
+	z-index: 101;
+}
+
+#myaccounts_menu h2 {
+	font-size: 22px;
+	font-weight: bold;
+	padding: 10px;
+	margin: 10px 0px;
+	text-align: center;
+}
+
+#myaccounts_wrapper {
+	width: 100%;
+	max-height: 75vh;
+	overflow-y: scroll;
+	scrollbar-width: none;
+	scrollbar-color: #7a8093 #3b3d44;
+	transition: all .6s;
+}
+
+#myaccounts_entries {
+	display: flex;
+	align-items: stretch;
+	justify-content: left;
+	flex-flow: row wrap;
+	width: 100%;
+}
+
+.myaccounts_entry {
+	flex-basis: 100%;
+	padding: 10px;
+	background: #3b3d44;
+	margin-bottom: 10px;
+	display: flex;
+	align-items: stretch;
+	justify-content: left;
+	flex-flow: row wrap;
+}
+
+.myaccounts_entry > .profile_img {
+	flex-basis: 35%;
+}
+
+.myaccounts_entry > .profile_meta {
+	flex-basis: 65%;
+	padding-left: 10px;
+}
+
+/*########################*/
+/*        ヘッダー         */
+/*########################*/
+header {
+	width: 100%;
+	height: auto;
+	background: rgba(0, 0, 0, 0.5);
+	border-bottom: 2px solid yellowgreen;
+}
+
+.add_hdeader_bg {
+	background: #1E1F26;
+}
+
+.header_content {
+	width: 100%;
+	padding: 10px 0px;
+	position: relative;
+}
+
+h1 {
+	font-size: 34px;
+	font-weight: bold;
+	margin: 0;
+}
+
+.site_title_link:hover {
+	background: unset;
+}
+
+.header_content > .header_btns {
+	position: absolute;
+	padding: 8px;
+	right: 0;
+	top: 0;
+	display: flex;
+	align-items: stretch;
+	flex-flow: row wrap;
+	height: 100%;
+	align-content: center;
+}
+
+#logout_btn {
+	padding: 10px;
+	flex-basis: 110px;
+	border: 1px solid white;
+}
+
+/**************************/
+/*        フッター        */
+/**************************/
+footer {
+	padding: 10px;
+	background: #010101;
+	color: white;
+	display: block;
+	width: 100%;
+}
+
+#copyright {
+	display: block;
+	width: 100%;
+	text-align: center;
+}
+
+/**************************/
+/*     サイドバー共通      */
+/**************************/
+.select_tworth_box {
+	padding: 10px;
+	width: 100%;
+	background: #2a2c31;
+	display: block;
+}
+
+#myaccounts_menu_show,
+#add_myaccount {
+	width: 100%;
+	padding: 10px;
+	margin-top: 10px;
+	border: 1px solid white;
+	display: block;
+	background: unset;
+	color: white;
+	text-align: center;
+	font-size: 18px;
+	cursor: pointer;
+	transition: all .4s;
+}
+
+#myaccounts_menu_show:active,
+#add_myaccount:active {
+	background: #7a8093;
+}
+
+#tweet_currenttime {
+	width: 100%;
+	padding: 10px;
+	margin-top: 10px;
+	border: 1px solid white;
+	background: #865DCA;
+	display: block;
+	background: unset;
+	color: white;
+	text-align: center;
+	font-size: 18px;
+	cursor: pointer;
+	transition: all .4s;
+}
+
+#tweet_currenttime:active {
+	background: rgb(148, 109, 211);  
+}
+
+.nav-menu-link {
+	display: block;
+	width: 100%;
+	padding: 10px;
+	color: white;
+	font-size: 13pt;
+}
+
+.nav-menu-link:hover {
+	background: #252830;
+}
+
+/*****************************/
+/*        トップページ        +/
+/*****************************/
+/*   Twitterタイムラインのスタイル修正   */
+.SandboxRoot.env-bp-970 .timeline-Tweet-text {
+    font-size: 12pt !important;
+    line-height: 14pt!important;
+}
+
+.SandboxRoot.env-bp-820 .timeline-Tweet-text {
+    font-size: 12pt !important;
+    line-height: 14pt!important;
+}
