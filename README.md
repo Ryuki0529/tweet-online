@@ -13,3 +13,13 @@
     自分と属性の近いインフルエンザーアカウントを指定し、そのインフルエンザーのフォロワーに対して、アクションを起こす機能です。
   </li>
 </ul>
+
+<strong>以下スクショです。</strong>
+<p>サービス紹介ページ</p>
+<img src="./sys/img/top-page.jpg" alt="サービス紹介ページ" />
+<p>コントロールページ</p>
+<img src="./sys/img/home-ui.png" alt="コントロールページ" />
+<p>Twitterアカウントの選択・切り替え</p>
+<img src="./sys/img/accounts-set.png" alt="Twitterアカウントの選択・切り替え" />
+<p>Twitterアカウントの追加</p>
+<img src="./sys/img/add-account.png" alt="Twitterアカウントの追加" />
