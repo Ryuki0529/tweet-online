@@ -1,5 +1,5 @@
 # Tweet Online
-<p>URL:<a href="https://webup.work/tweet-online/" target="_blank">https://webup.work/tweet-online/</a></p>
+<p>URL:<a href="https://webup.work/tweet-online/" target="_blank">https://webup.work/tweet-online/</a>（運用を終了しました。）</p>
 <p>開発自体を中止したので、コードを公開することにしました。</p>
 <p>元々は、有料のTwitter運用ツールを利用していたのですが、無料のサービスとして使いたいという願望があり、制作をスタートしたものになります。しかし、サービスとしてリリースするにあたり、色々と問題が浮上したため、サービスとしての公開は中止することにしました。</p>
 
